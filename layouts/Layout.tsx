@@ -19,11 +19,11 @@ export const Layout = ({ session, isBack, className, children }: { session: any;
         <div className='fixed left-0 z-20 mx-auto top-6 w-full'>
           <div className='w-full max-w-6xl mx-auto px-4'>
             <div className='w-full flex items-center justify-between'>
-              <div className='w-32'>
+              <div className='w-14 sm:w-16'>
                 {isBack ? (
                   <Button variant='link' onClick={onBack}>
                     <CaretLeftIcon className='size-5' />
-                    Back
+                    <span className='hidden sm:block'>Back</span>
                   </Button>
                 ) : null}
               </div>
@@ -31,9 +31,9 @@ export const Layout = ({ session, isBack, className, children }: { session: any;
                 <div className=''>
                   <img src={session?.user?.image} alt={session?.user?.name} className='size-9 rounded-full' loading='lazy' />
                 </div>
-                <div className='w-32 text-center truncate font-semibold'>{session?.user?.name}</div>
+                <div className='w-28 md:w-32 text-center truncate font-semibold'>{session?.user?.name}</div>
               </div>
-              <div className='w-fit'>
+              <div className='w-14 md:w-16'>
                 <ModeToggle />
               </div>
             </div>
