@@ -18,7 +18,7 @@ export default async function PageRoom(props: any) {
   const defaultLanguage = defaultListLanguage?.[language] ?? 'en';
 
   return (
-    <Layout session={session} className='bg-green-200 border-green-400 dark:bg-green-700 dark:border-green-600'>
+    <Layout session={session} isBack={true} className='bg-green-200 border-green-400 dark:bg-green-700 dark:border-green-600'>
       <Room id={id} defaultLanguage={defaultLanguage} />
     </Layout>
   );
