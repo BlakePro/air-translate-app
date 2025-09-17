@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
-const urlSocket = 'wss://192.168.1.68:3000';
 
 export function useWebRTC(roomId: string, lang: string) {
   const socket = useRef<any>(null);
@@ -15,7 +14,7 @@ export function useWebRTC(roomId: string, lang: string) {
   useEffect(() => {
     if (!roomId) return;
 
-    socket.current = io(urlSocket);
+    socket.current = io(process.env.NEXT_PUBLIC_URL_SOCKET, { transports: ['websocket'] });
 
     const init = async () => {
       // 1. Capture microphone

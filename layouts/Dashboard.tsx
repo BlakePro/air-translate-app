@@ -29,11 +29,11 @@ export const Dashboard = ({ session }: { session: any }): ReactNode => {
       <div className='w-full flex flex-col gap-6'>
         <div className='w-full flex flex-row gap-6'>
           <Link href={`/room/${session?.user?.name}`} className='w-full p-8 shadow-xs flex flex-col items-center justify-center gap-3 border hover:border-slate-800 dark:hover:border-slate-400 rounded-lg'>
-            <PlayIcon className='size-12' weight='duotone' />
+            <PlayIcon className='size-12' />
             Start
           </Link>
           <button type='button' onClick={onModal} className='w-full p-8 shadow-xs flex flex-col items-center justify-center gap-3 border hover:border-slate-800 dark:hover:border-slate-400 rounded-lg'>
-            <PhoneOutgoingIcon className='size-12' weight='duotone' />
+            <PhoneOutgoingIcon className='size-12' />
             Join
           </button>
         </div>
