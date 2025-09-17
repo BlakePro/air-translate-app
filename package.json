@@ -8,6 +8,7 @@
     "dev": "next dev --turbopack --port 3000 --experimental-https",
     "build": "next build --turbopack",
     "start": "next start",
+    "commit": "sh sh/commit.sh",
     "lint": "biome format --fix && biome check --fix --unsafe --max-diagnostics=500",
     "check-types": "tsc --noEmit"
   },

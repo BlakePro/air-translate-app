@@ -14,7 +14,7 @@ export function useWebRTC(roomId: string, lang: string) {
   useEffect(() => {
     if (!roomId) return;
 
-    socket.current = io(process.env.NEXT_PUBLIC_URL_SOCKET, { transports: ['websocket'] });
+    socket.current = io(process.env.NEXT_PUBLIC_URL_SOCKET, { transports: ['websocket'], withCredentials: true });
 
     const init = async () => {
       // 1. Capture microphone
